@@ -1,17 +1,19 @@
 import { Outlet } from "react-router-dom"
 import { Logo } from "@/components/Logo"
+import NavMenu from "@/components/NavMenu"
 
 export const AppLayout = () => {
   return (
     <>
         <header className="bg-gray-800 py-5">
-            <div className="max-w-screen-2xl mx-auto flex flex-col lg:flex-row justify-between items-center">
+            <div className="max-w-screen-2xl mx-10 flex flex-col lg:flex-row justify-between items-center ">
                {/* Logo */}
-                <div className="w-64">
+                <div className="w-52">
                     <Logo />
                 </div>
 
                 {/* Hamburger Navbar */}
+                <NavMenu />
             </div>
         </header>
         
