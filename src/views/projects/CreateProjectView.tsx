@@ -16,9 +16,9 @@ export const CreateProjectView = () => {
   const {register, handleSubmit, formState: {errors}} = useForm({defaultValues: initialValues})
 
 
-  const handleForm = (formData : ProjectFormData) =>{
-      createProject(formData);
-      
+  const handleForm = async (formData : ProjectFormData) =>{
+      await createProject(formData);
+      navigate('/')
   }
     
 
