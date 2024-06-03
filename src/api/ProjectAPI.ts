@@ -1,6 +1,6 @@
 import { isAxiosError } from "axios"
 import { ProjectFormData } from "types"
-import api from "../lib"
+import api from "@/lib/axios"
 
 // ! CREATE
 export async function createProject(formData: ProjectFormData) {
