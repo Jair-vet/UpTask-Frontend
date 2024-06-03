@@ -23,12 +23,14 @@ export const CreateProjectView = () => {
 
   return (
     <>
-       <h1 className="text-3xl font-black uppercase">Create Projects</h1>
-        <p className="text-xl font-light text-gray-500 mt-5">fill out form to create a project</p>
+      <div className="max-w-3xl mx-auto">
+       <h1 className="text-3xl font-black uppercase md:text-left text-center">Create Projects</h1>
+        <p className="text-xl font-light text-gray-500 mt-5 md:text-left text-center">fill out form to create a project</p>
 
-        <nav className="my-5 ">
+        <nav className="my-5">
             <Link
-                className="bg-purple-500 hover:bg-purple-600 px-10 py-3 rounded-lg text-white text-xl font-bold cursor-pointer transition-colors"
+                className="bg-purple-500 hover:bg-purple-600 px-10 py-3 rounded-lg
+                 text-white text-xl font-bold cursor-pointer transition-colors "
                 to={'/'}
             >Back to Projects</Link>
         </nav>
@@ -47,9 +49,11 @@ export const CreateProjectView = () => {
           <input
               type="submit"
               value='Crear Proyecto'
-              className=" bg-fuchsia-600 hover:bg-fuchsia-700 rounded-md w-full p-3 text-white uppercase font-bold cursor-pointer transition-colors"
+              className=" bg-fuchsia-600 hover:bg-fuchsia-700 rounded-md w-full p-3 text-white 
+                uppercase font-bold cursor-pointer transition-colors"
           />  
         </form> 
+      </div>
     </>
   )
 }
