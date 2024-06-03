@@ -57,7 +57,7 @@ export const ProjectForm = ({errors, register} : ProjectFormProps) => {
                     className="input_formulario"
                     placeholder="Descripción del Proyecto"
                     {...register("description", {
-                        required: "Una descripción del proyecto es obligatoria"
+                        required: "La descripción del proyecto es obligatoria"
                     })}
                 />
 

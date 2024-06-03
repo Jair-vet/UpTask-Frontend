@@ -7,9 +7,15 @@
     "skipLibCheck": true,
     "baseUrl": "src",
     "paths": {
-      "@/components/*": ["components/*"],
-      "@/views/*": ["views/*"],
-      "@/layouts/*": ["layouts/*"],
+      "@/components/*" : ["components/*"],
+      "@/views/*" : ["views/*"],
+      "@/layouts/*" : ["layouts/*"],
+      "@/api/*" : ["api/*"],
+      "@/types/*" : ["types/*"],
+      "@/lib/*" : ["lib/*"],
+      "@/utils/*" : ["utils/*"],
+      "@/locales/*" : ["locales/*"],
+      "@/hooks/*" : ["hooks/*"],
     },
 
     /* Bundler mode */
