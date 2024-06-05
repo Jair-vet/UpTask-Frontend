@@ -8,7 +8,7 @@ export const AppLayout = () => {
   return (
     <>
         <header className="bg-gray-800 py-5">
-            <div className="max-w-screen-2xl mx-10 flex flex-col lg:flex-row justify-between items-center ">
+            <div className="max-w-screen-2xl mx-10 flex flex-col md:flex-row justify-between items-center ">
                {/* Logo */}
                 <div className="w-52">
                     <Logo />
