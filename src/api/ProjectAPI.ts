@@ -44,7 +44,7 @@ export async function getProjectById(id: Project['_id']) {
             throw new Error(error.response.data.error)
         }
     }
-}
+} 
 
 
 type ProjectAPIType = {

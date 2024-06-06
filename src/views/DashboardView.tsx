@@ -34,7 +34,7 @@ export const DashboardView = () => {
               <div className="flex min-w-0 gap-x-4">
                   <div className="min-w-0 flex-auto space-y-2">
                       <Link to={``}
-                          className="cursor-pointer text-fuchsia-500 hover:underline text-2xl uppercase font-extrabold"
+                          className="text-fuchsia-500 hover:underline text-2xl uppercase font-extrabold"
                       >{project.projectName}</Link>
                       <p className="text-sm text-gray-500">
                         <span className="text-blue-400">Cliente:</span> {project.clientName}
