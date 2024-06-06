@@ -100,11 +100,12 @@ export default function AddTaskModal() {
                                             errors={errors}
                                         />
 
-                                        <input
-                                            type="submit"
-                                            className=" bg-fuchsia-600 hover:bg-fuchsia-700 w-full p-3 text-white uppercase font-bold cursor-pointer transition-colors"
-                                            value='Guardar Tarea'
-                                        />  
+                                    <input
+                                        type="submit"
+                                        value='Guardar Tarea'
+                                        className=" bg-fuchsia-600 hover:bg-fuchsia-700 rounded-md w-full p-3 text-white 
+                                            uppercase font-bold cursor-pointer transition-colors"
+                                    />
                                     </form>
 
                                 </Dialog.Panel>
