@@ -1,4 +1,4 @@
-import { Outlet } from "react-router-dom"
+import { Link, Outlet } from "react-router-dom"
 import { Logo } from "@/components/Logo"
 import NavMenu from "@/components/NavMenu"
 import { ToastContainer } from "react-toastify"
@@ -11,7 +11,9 @@ export const AppLayout = () => {
             <div className="max-w-screen-2xl mx-10 flex flex-col md:flex-row justify-between items-center ">
                {/* Logo */}
                 <div className="w-52">
-                    <Logo />
+                    <Link to={'/'}>
+                        <Logo />
+                    </Link>
                 </div>
 
                 {/* Hamburger Navbar */}
