@@ -46,7 +46,7 @@ export const DashboardView = () => {
           <li key={project._id} className="flex justify-between gap-x-6 px-5 py-5">
               <div className="flex min-w-0 gap-x-4">
                   <div className="min-w-0 flex-auto space-y-2">
-                      <Link to={``}
+                      <Link to={`/projects/${project._id}`}
                           className="text-fuchsia-500 hover:underline text-2xl uppercase font-extrabold"
                       >{project.projectName}</Link>
                       <p className="text-sm text-gray-500">
@@ -71,7 +71,7 @@ export const DashboardView = () => {
                               className="absolute right-0 z-10 w-56 origin-top-right rounded-md bg-white py-3 shadow-lg ring-1 ring-gray-900/5 focus:outline-none"
                           >
                                   <Menu.Item>
-                                      <Link to={``}
+                                      <Link to={`/projects/${project._id}`}
                                           className='w-full block px-3 py-1 text-center text-sm leading-6 text-gray-900 hover:text-white hover:bg-purple-500'>
                                       Ver Proyecto
                                       </Link>
