@@ -67,7 +67,7 @@ export default function AddTaskModal() {
                     </Transition.Child>
 
                     <div className="fixed inset-0 overflow-y-auto">
-                        <div className="flex min-h-full items-center justify-center p-4 text-center">
+                        <div className="flex min-h-full items-center justify-center md:p-4 text-center">
                             <Transition.Child
                                 as={Fragment}
                                 enter="ease-out duration-300"
@@ -77,7 +77,7 @@ export default function AddTaskModal() {
                                 leaveFrom="opacity-100 scale-100"
                                 leaveTo="opacity-0 scale-95"
                             >
-                                <Dialog.Panel className="w-full max-w-4xl transform overflow-hidden rounded-2xl bg-gray-200 text-left align-middle shadow-xl transition-all p-16">
+                                <Dialog.Panel className="w-full md:m-10 max-w-3xl transform overflow-hidden rounded-2xl bg-gray-200 text-left align-middle shadow-xl transition-all p-16">
                                     <Dialog.Title
                                         as="h3"
                                         className="font-black text-4xl  my-5"
@@ -91,21 +91,22 @@ export default function AddTaskModal() {
 
                                     {/* Formulario */}
                                     <form
-                                        className='mt-10 space-y-3'
+                                        className='mt-5 space-y-3'
                                         onSubmit={handleSubmit(handleCreateTask)}
                                         noValidate
                                     >
+                                        {/* Formulario Tareas */}
                                         <TaskForm 
                                             register={register}
                                             errors={errors}
                                         />
 
-                                    <input
-                                        type="submit"
-                                        value='Guardar Tarea'
-                                        className=" bg-fuchsia-600 hover:bg-fuchsia-700 rounded-md w-full p-3 text-white 
-                                            uppercase font-bold cursor-pointer transition-colors"
-                                    />
+                                        <input
+                                            type="submit"
+                                            value='Guardar Tarea'
+                                            className=" bg-fuchsia-600 hover:bg-fuchsia-700 rounded-md w-full p-3 text-white 
+                                                uppercase font-bold cursor-pointer transition-colors"
+                                        />
                                     </form>
 
                                 </Dialog.Panel>
