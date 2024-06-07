@@ -77,16 +77,16 @@ export default function AddTaskModal() {
                                 leaveFrom="opacity-100 scale-100"
                                 leaveTo="opacity-0 scale-95"
                             >
-                                <Dialog.Panel className="w-full md:m-10 max-w-3xl transform overflow-hidden rounded-2xl bg-gray-200 text-left align-middle shadow-xl transition-all p-16">
+                                <Dialog.Panel className="w-full md:m-10 max-w-3xl transform overflow-hidden rounded-2xl bg-slate-500 text-left align-middle shadow-xl transition-all p-16">
                                     <Dialog.Title
                                         as="h3"
-                                        className="font-black text-4xl  my-5"
+                                        className="font-black text-white text-4xl  my-5"
                                     >
                                         New Task
                                     </Dialog.Title>
 
-                                    <p className="text-xl font-bold">Fill out the form and create  {''}
-                                        <span className="text-fuchsia-600">new Task</span>
+                                    <p className="text-xl text-white font-bold">Fill out the form and create  {''}
+                                        <span className="text-green-500">new Task</span>
                                     </p>
 
                                     {/* Formulario */}
@@ -104,7 +104,7 @@ export default function AddTaskModal() {
                                         <input
                                             type="submit"
                                             value='Guardar Tarea'
-                                            className=" bg-fuchsia-600 hover:bg-fuchsia-700 rounded-md w-full p-3 text-white 
+                                            className=" bg-green-500 hover:bg-green-600 rounded-md w-full p-3 text-white 
                                                 uppercase font-bold cursor-pointer transition-colors"
                                         />
                                     </form>
