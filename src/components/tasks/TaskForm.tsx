@@ -9,11 +9,11 @@ type TaskFormProps = {
 export const TaskForm = ({errors, register} : TaskFormProps) => {
   return (
     <>
-      <div className="space-y-5 bg-white p-6 rounded-md">
+      <div className="space-y-5 bg-gray-700 p-6 rounded-md">
 
         <div className="flex flex-col gap-1">
             <label
-                className="text-blue-500 text-sm uppercase font-bold"
+                className="text-green-500 text-sm uppercase font-bold"
                 htmlFor="name"
             >Nombre de la tarea</label>
             <input
@@ -32,7 +32,7 @@ export const TaskForm = ({errors, register} : TaskFormProps) => {
 
         <div className="flex flex-col gap-1">
             <label
-                className="text-blue-500 text-sm uppercase font-bold"
+                className="text-green-500 text-sm uppercase font-bold"
                 htmlFor="description"
             >Descripción de la tarea</label>
             <textarea
