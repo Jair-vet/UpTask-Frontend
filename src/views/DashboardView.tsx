@@ -28,9 +28,9 @@ export const DashboardView = () => {
   if(isLoading) return 'Cargando...'
 
   if (data) return (
-    <>
-      <h1 className="text-3xl font-black uppercase">My projects</h1>
-      <p className="text-xl font-light text-gray-500 mt-5">Manage your projects</p>
+    <div className="p-5">
+      <h1 className="text-3xl font-black text-white uppercase">My projects</h1>
+      <p className="text-xl font-light text-emerald-500 mt-5">Manage your projects</p>
 
       <nav className="my-5 ">
           <Link
@@ -41,25 +41,25 @@ export const DashboardView = () => {
 
 
       {data.length ? (
-      <ul role="list" className="divide-y divide-gray-100 border rounded-md border-gray-100 mt-10 bg-white shadow-lg">
+      <ul role="list" className="divide-y bg-slate-800 divide-gray-100 border rounded-md border-green-400 mt-10 shadow-lg">
         {data.map((project) => (
           <li key={project._id} className="flex justify-between gap-x-6 px-5 py-5">
               <div className="flex min-w-0 gap-x-4">
                   <div className="min-w-0 flex-auto space-y-2">
                       <Link to={`/projects/${project._id}`}
-                          className="text-fuchsia-500 hover:underline text-2xl uppercase font-extrabold"
+                          className="text-green-400 fius hover:underline text-2xl uppercase font-extrabold"
                       >{project.projectName}</Link>
-                      <p className="text-sm text-gray-500">
-                        <span className="text-blue-400">Cliente:</span> {project.clientName}
+                      <p className="text-sm text-white">
+                        <span className="text-fuchsia-500">Cliente:</span> {project.clientName}
                       </p>
-                      <p className="text-sm text-gray-500">
-                        <span className="text-blue-400">Descripción:</span> {project.description}
+                      <p className="text-sm text-white">
+                        <span className="text-fuchsia-500">Descripción:</span> {project.description}
                       </p>
                   </div>
               </div>
               <div className="flex shrink-0 items-center gap-x-6">
                   <Menu as="div" className="relative flex-none">
-                      <Menu.Button className="-m-2.5 block p-2.5 text-gray-500 hover:text-gray-900">
+                      <Menu.Button className="-m-2.5 block p-2.5 text-green-600 hover:text-white">
                           <span className="sr-only">opciones</span>
                           <EllipsisVerticalIcon className="h-9 w-9" aria-hidden="true" />
                       </Menu.Button>
@@ -107,6 +107,6 @@ export const DashboardView = () => {
         </p>
       )}
 
-    </>
+    </div>
   )
 }
