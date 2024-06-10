@@ -47,7 +47,7 @@ export const CreateProjectView = () => {
         </nav>
 
         <form
-          className="mt-10 bg-slate-500 shadow-lg p-10 rounded-lg"
+          className="mt-10 bg-slate-500 shadow-lg p-10 rounded-lg m-10"
           onSubmit={handleSubmit(handleForm)}
           noValidate
         > 
