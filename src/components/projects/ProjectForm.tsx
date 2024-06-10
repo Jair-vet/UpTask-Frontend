@@ -11,7 +11,7 @@ export const ProjectForm = ({errors, register} : ProjectFormProps) => {
   return (
     <>
         <div className="mb-5 space-y-3">
-                <label htmlFor="projectName" className="text-blue-500 text-sm uppercase font-bold">
+                <label htmlFor="projectName" className="text-green-500 text-sm uppercase font-bold">
                     Nombre del Proyecto
                 </label>
                 <input
@@ -30,7 +30,7 @@ export const ProjectForm = ({errors, register} : ProjectFormProps) => {
             </div>
 
             <div className="mb-5 space-y-3">
-                <label htmlFor="clientName" className="text-blue-500 text-sm uppercase font-bold">
+                <label htmlFor="clientName" className="text-green-500 text-sm uppercase font-bold">
                     Nombre Cliente
                 </label>
                 <input
@@ -49,7 +49,7 @@ export const ProjectForm = ({errors, register} : ProjectFormProps) => {
             </div>
 
             <div className="mb-5 space-y-3">
-                <label htmlFor="description" className="text-blue-500 text-sm uppercase font-bold">
+                <label htmlFor="description" className="text-green-500 text-sm uppercase font-bold">
                     Descripción
                 </label>
                 <textarea
