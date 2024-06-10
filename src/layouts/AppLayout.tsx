@@ -26,7 +26,7 @@ export const AppLayout = () => {
         </section>
 
         <footer className="py-5">
-            <p className="text-center">Todos los derechos reservados &copy; {new Date().getFullYear()}</p>
+            <p className="text-center text-green-500">Todos los derechos reservados &copy; {new Date().getFullYear()}</p>
         </footer>
 
         <ToastContainer 
