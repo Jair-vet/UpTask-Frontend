@@ -77,7 +77,7 @@ export default function AddTaskModal() {
                                 leaveFrom="opacity-100 scale-100"
                                 leaveTo="opacity-0 scale-95"
                             >
-                                <Dialog.Panel className="w-full md:m-10 max-w-3xl transform overflow-hidden rounded-2xl bg-slate-500 text-left align-middle shadow-xl transition-all p-16">
+                                <Dialog.Panel className="w-full md:m-10 m-8 max-w-3xl transform overflow-hidden rounded-2xl bg-slate-500 text-left align-middle shadow-xl transition-all p-16">
                                     <Dialog.Title
                                         as="h3"
                                         className="font-black text-white text-4xl  my-5"
@@ -103,7 +103,7 @@ export default function AddTaskModal() {
 
                                         <input
                                             type="submit"
-                                            value='Guardar Tarea'
+                                            value='Save Task'
                                             className=" bg-green-500 hover:bg-green-600 rounded-md w-full p-3 text-white 
                                                 uppercase font-bold cursor-pointer transition-colors"
                                         />
