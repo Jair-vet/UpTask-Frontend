@@ -21,7 +21,7 @@ export const EditTaskModal = ({data, taskId} : EditTaskModalProps) => {
     const params = useParams()
     const projectId = params.projectId!
 
-    const { register, handleSubmit, reset, formState: {errors}  } = useForm<TaskFormData>({defaultValues: {
+    const { register, handleSubmit, reset, formState: {errors} } = useForm<TaskFormData>({defaultValues: {
         name: data.name,
         description: data.description
     }})

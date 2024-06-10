@@ -3,6 +3,9 @@ import { Menu, Transition } from '@headlessui/react'
 import { EllipsisVerticalIcon } from '@heroicons/react/20/solid'
 import { TaskProject } from "@/types/index"
 import { useNavigate, useParams } from 'react-router-dom'
+import { useMutation, useQueryClient } from '@tanstack/react-query'
+import { deleteTask } from '@/api/TaskAPI'
+import { toast } from 'react-toastify'
 
 type TaskCardProps = {
     task: TaskProject
@@ -12,6 +15,19 @@ export const TaskCard = ({ task }: TaskCardProps) => {
 
     const navigate = useNavigate()
     const params = useParams()
+    const projectId = params.projectId!
+
+    const queryClient = useQueryClient()
+    const { mutate } = useMutation({
+        mutationFn: deleteTask,
+        onError: (error) => {
+            toast.error(error.message)
+        },
+        onSuccess: (data) => {
+            toast.success(data)
+            queryClient.invalidateQueries({ queryKey: ['project', projectId] })
+        }
+    })
 
     // const style = transform ? {
     //     transform: `translate3d(${transform.x}px, ${transform.y}px, 0)`,
@@ -74,7 +90,7 @@ export const TaskCard = ({ task }: TaskCardProps) => {
                                 <button
                                     type='button'
                                     className='input_modal_botton hover:border-y-red-500 text-red-500'
-                                    // onClick={() => mutate({ projectId, taskId: task._id })}
+                                    onClick={() => mutate({ projectId, taskId: task._id })}
                                 >
                                     Eliminar Tarea
                                 </button>
