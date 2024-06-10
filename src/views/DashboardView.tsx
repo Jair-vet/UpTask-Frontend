@@ -41,7 +41,7 @@ export const DashboardView = () => {
 
 
       {data.length ? (
-      <ul role="list" className="divide-y bg-slate-800 divide-gray-100 border rounded-md border-green-400 mt-10 shadow-lg">
+      <ul role="list" className="divide-y bg-slate-800 divide-green-400 border rounded-md border-green-400 mt-10 shadow-lg">
         {data.map((project) => (
           <li key={project._id} className="flex justify-between gap-x-6 px-5 py-5">
               <div className="flex min-w-0 gap-x-4">
