@@ -46,8 +46,8 @@ export const EditProjectForm = ({data, projectId} : EditProjectFormProps) => {
   return (
     <>
         <div className="max-w-3xl mx-auto">
-            <h1 className="text-3xl font-black uppercase">Editar Proyecto</h1>
-            <p className="text-xl font-light text-gray-500 mt-5">Llena el siguiente formulario para editar el proyecto</p>
+            <h1 className="text-3xl font-black text-white uppercase">Edit Project</h1>
+            <p className="text-xl font-light text-emerald-500 mt-5">Fill Out the Form to edit</p>
 
             <nav className="my-5 ">
                 <Link
@@ -57,7 +57,7 @@ export const EditProjectForm = ({data, projectId} : EditProjectFormProps) => {
             </nav>
 
             <form
-                className="mt-10 bg-white shadow-lg p-10 rounded-lg"
+                className="mt-10 bg-slate-500 shadow-lg p-10 rounded-lg"
                 onSubmit={handleSubmit(handleForm)}
                 noValidate
             >
@@ -70,7 +70,7 @@ export const EditProjectForm = ({data, projectId} : EditProjectFormProps) => {
                 <input
                     type="submit"
                     value='Guardar Cambios'
-                    className=" bg-fuchsia-600 hover:bg-fuchsia-700 rounded-md w-full p-3 text-white 
+                    className=" bg-green-600 hover:bg-green-700 rounded-md w-full p-3 text-white 
                         uppercase font-bold cursor-pointer transition-colors"
                 />
             </form>
