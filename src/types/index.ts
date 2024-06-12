@@ -1,5 +1,15 @@
 import { z } from 'zod'
 
+/** Notes */
+const noteSchema = z.object({
+    _id: z.string(),
+    content: z.string(),
+    task: z.string(),
+    createdAt: z.string()
+})
+export type Note = z.infer<typeof noteSchema>
+export type NoteFormData = Pick<Note, 'content'>
+
 /** Tasks */
 export const taskStatusSchema = z.enum(["pending", "onHold", "inProgress", "underReview", "completed" ])
 export type TaskStatus = z.infer<typeof taskStatusSchema>
@@ -10,6 +20,7 @@ export const taskSchema = z.object({
     description: z.string(),
     project: z.string(),
     status: taskStatusSchema,
+    notes: z.array(noteSchema),
     createdAt: z.string(),
     updatedAt: z.string()
 })
