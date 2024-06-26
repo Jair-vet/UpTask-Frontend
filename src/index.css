@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Mantener el texto dento del DIV */
+div{
+    word-wrap: break-word;
+}
 
 .input_formulario {
     @apply w-full p-3 rounded-md text-gray-500 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-green-500

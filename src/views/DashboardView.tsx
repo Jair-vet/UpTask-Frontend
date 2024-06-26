@@ -57,7 +57,7 @@ export const DashboardView = () => {
                       </p>
                   </div>
               </div>
-              <div className="flex shrink-0 items-center gap-x-6">
+              <div className="flex shrink-0 items-center gap-x-6 text-wrap flex-wrap">
                   <Menu as="div" className="relative flex-none">
                       <Menu.Button className="-m-2.5 block p-2.5 text-green-600 hover:text-white">
                           <span className="sr-only">opciones</span>

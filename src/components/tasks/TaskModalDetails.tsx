@@ -7,6 +7,7 @@ import { getTaskById, updateStatus } from '@/api/TaskAPI';
 import { formatDate } from '@/utils/utils';
 import { TaskStatus } from '@/types/index';
 import { statusTranslations } from '@/locales/es';
+// import { NotesPanel } from '../notes/NotesPanel';
 
 
 export const TaskModalDetails = () => {
@@ -41,10 +42,10 @@ export const TaskModalDetails = () => {
     })
 
     const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    const status = e.target.value as TaskStatus
-    const data = { projectId, taskId, status }
-    mutate(data)
-}
+        const status = e.target.value as TaskStatus
+        const data = { projectId, taskId, status }
+        mutate(data)
+    }
 
     if (isError) {
         toast.error(error.message, { toastId: 'error' })
@@ -112,7 +113,7 @@ export const TaskModalDetails = () => {
                                 <div className='my-5 space-y-3'>
                                     <label className='font-bold text-white'>Estado Actual:</label>
                                     <select
-                                        className='w-full p-3 text-green-600  focus:border focus:border-green-300 rounded-lg'
+                                        className='w-full p-3 text-green-600 focus:border focus:border-green-300 rounded-lg'
                                         defaultValue={data.status}
                                         onChange={handleChange}
                                     >
@@ -122,7 +123,7 @@ export const TaskModalDetails = () => {
                                     </select>
                                 </div>
 
-                                {/* <NotesPanel 
+                                {/* <NotesPanel
                                     notes={data.notes}
                                 /> */}
                             </Dialog.Panel>

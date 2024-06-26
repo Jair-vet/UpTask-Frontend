@@ -1,5 +1,6 @@
 import { FieldErrors, UseFormRegister } from "react-hook-form"
 import { TaskFormData } from "@/types/index";
+import ErrorMessage from "../ErrorMessage";
 
 type TaskFormProps = {
     errors: FieldErrors<TaskFormData>
@@ -25,9 +26,9 @@ export const TaskForm = ({errors, register} : TaskFormProps) => {
                     required: "El nombre de la tarea es obligatorio",
                 })}
             />
-            {/* {errors.name && (
+            {errors.name && (
                 <ErrorMessage>{errors.name.message}</ErrorMessage>
-            )} */}
+            )}
         </div>
 
         <div className="flex flex-col gap-1">
@@ -43,9 +44,9 @@ export const TaskForm = ({errors, register} : TaskFormProps) => {
                     required: "La descripción de la tarea es obligatoria"
                 })}
             />
-            {/* {errors.description && (
+            {errors.description && (
                 <ErrorMessage>{errors.description.message}</ErrorMessage>
-            )} */}
+            )}
         </div>
       </div>
     </>
